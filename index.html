@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JZAC DESIGNS</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black:#000000; --w1:#F4F4F4; --w2:#C0C0C0; --w3:#777777; --w4:#333333; --line:#1c1c1c; }
+    html { background: var(--black); }
+    body { min-height:100vh; background:var(--black); color:var(--w1); font-family:'Helvetica Neue',Helvetica,Arial,'Segoe UI',sans-serif; -webkit-font-smoothing:antialiased; }
+    body::after { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity:0.035; pointer-events:none; z-index:999; }
+    .page { position:relative; max-width:460px; margin:0 auto; padding:64px 28px 88px; }
+    .profile { margin-bottom:60px; }
+    .eyebrow { font-size:9px; font-weight:500; letter-spacing:5px; color:var(--w4); text-transform:uppercase; margin-bottom:20px; }
+    .brand { font-size:48px; font-weight:800; letter-spacing:-2px; line-height:0.95; background:linear-gradient(160deg,#ffffff 0%,#a0a0a0 60%,#d8d8d8 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:18px; position:relative; }
+    .brand::after { content:'JZAC DESIGNS'; position:absolute; inset:0; background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,0.55) 50%,transparent 65%); background-size:250% 100%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 5s ease-in-out infinite; }
+    @keyframes shimmer { 0%,100%{background-position:200% 0} 50%{background-position:-50% 0} }
+    .rule { height:1px; background:var(--line); margin-bottom:20px; }
+    .descriptor { font-size:10px; letter-spacing:3.5px; color:var(--w3); text-transform:uppercase; margin-bottom:6px; }
+    .descriptor+.descriptor { color:var(--w4); }
+    .section { margin-bottom:44px; }
+    .section-head { font-size:8px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:var(--w4); padding-bottom:12px; border-bottom:1px solid var(--line); }
+    .link-card { display:flex; align-items:center; justify-content:space-between; padding:20px 0; border-bottom:1px solid var(--line); text-decoration:none; color:var(--w2); position:relative; transition:color .18s,padding-left .18s; -webkit-tap-highlight-color:transparent; }
+    .link-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--w1); transform:scaleY(0); transform-origin:bottom; transition:transform .18s cubic-bezier(.4,0,.2,1); }
+    .link-card:hover,.link-card:focus-visible { color:var(--w1); padding-left:14px; outline:none; }
+    .link-card:hover::before,.link-card:focus-visible::before { transform:scaleY(1); }
+    @media(hover:none){.link-card:active{color:var(--w1);padding-left:8px}}
+    .link-text { display:flex; flex-direction:column; gap:4px; }
+    .link-title { font-size:15px; font-weight:500; letter-spacing:.3px; line-height:1; }
+    .link-card.primary .link-title { font-weight:700; color:var(--w1); }
+    .link-sub { font-size:11px; color:var(--w4); letter-spacing:.5px; transition:color .18s; }
+    .link-card:hover .link-sub,.link-card:focus-visible .link-sub { color:var(--w3); }
+    .link-arrow { font-size:20px; color:var(--w4); font-weight:200; transition:transform .18s,color .18s; flex-shrink:0; }
+    .link-card:hover .link-arrow,.link-card:focus-visible .link-arrow { transform:translateX(5px); color:var(--w1); }
+    .footer { margin-top:8px; padding-top:28px; border-top:1px solid var(--line); }
+    .footer-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px; }
+    .footer-a { font-size:11px; letter-spacing:1px; color:var(--w4); text-decoration:none; transition:color .15s; }
+    .footer-a:hover { color:var(--w2); }
+    .footer-copy { font-size:9px; letter-spacing:2.5px; color:var(--w4); text-transform:uppercase; opacity:.4; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header class="profile">
+    <p class="eyebrow">Spokane, WA &nbsp;&middot;&nbsp; Est. 2024</p>
+    <h1 class="brand">JZAC<br>DESIGNS</h1>
+    <div class="rule"></div>
+    <p class="descriptor">3D Fabrication &nbsp;&middot;&nbsp; Custom D&eacute;cor &nbsp;&middot;&nbsp; Ships Nationwide</p>
+    <p class="descriptor">Vinyl &amp; Signage &nbsp;&middot;&nbsp; Spokane Area</p>
+  </header>
+  <section class="section" aria-label="Shop">
+    <div class="section-head">Shop</div>
+    <a href="#" class="link-card primary"><div class="link-text"><span class="link-title">Shopify Store</span><span class="link-sub">3D Lamps &amp; Home D&eacute;cor</span></div><span class="link-arrow">&#8250;</span></a>
+    <a href="#" class="link-card"><div class="link-text"><span class="link-title">Etsy</span><span class="link-sub">Handcrafted Collections</span></div><span class="link-arrow">&#8250;</span></a>
+    <a href="#" class="link-card"><div class="link-text"><span class="link-title">eBay</span><span class="link-sub">Full Listings</span></div><span class="link-arrow">&#8250;</span></a>
+    <a href="#" class="link-card"><div class="link-text"><span class="link-title">Facebook Marketplace</span><span class="link-sub">Local &amp; Nationwide</span></div><span class="link-arrow">&#8250;</span></a>
+  </section>
+  <section class="section" aria-label="Services">
+    <div class="section-head">Services</div>
+    <a href="tel:+15097208239" class="link-card primary"><div class="link-text"><span class="link-title">Request a Quote</span><span class="link-sub">(509) 720-8239</span></div><span class="link-arrow">&#8250;</span></a>
+    <a href="#" class="link-card"><div class="link-text"><span class="link-title">Book a Project</span><span class="link-sub">Vinyl &amp; Signage &mdash; Spokane Area</span></div><span class="link-arrow">&#8250;</span></a>
+  </section>
+  <section class="section" aria-label="Contact">
+    <div class="section-head">Contact</div>
+    <a href="#" class="link-card"><div class="link-text"><span class="link-title">Instagram</span><span class="link-sub">@jzacdesigns</span></div><span class="link-arrow">&#8250;</span></a>
+    <a href="mailto:JZacDesigns@proton.me" class="link-card"><div class="link-text"><span class="link-title">Email</span><span class="link-sub">JZacDesigns@proton.me</span></div><span class="link-arrow">&#8250;</span></a>
+  </section>
+  <footer class="footer">
+    <div class="footer-row">
+      <a href="tel:+15097208239" class="footer-a">(509) 720-8239</a>
+      <a href="mailto:JZacDesigns@proton.me" class="footer-a">JZacDesigns@proton.me</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 JZAC Designs &nbsp;&middot;&nbsp; Spokane, WA</p>
+  </footer>
+</div>
+</body>
+</html>
