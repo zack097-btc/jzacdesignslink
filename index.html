@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════
+     SEO / SHARE PREVIEW — edit here if you ever change site-wide
+     title or description. Per-quote details are NOT edited here —
+     see script.js for that.
+     ══════════════════════════════════════════════════════════════ -->
+<title>JZac Designs Quote / Estimate</title>
+<meta name="description" content="Review and approve your custom JZac Designs quote for vinyl lettering, signs, graphics, decals, and custom design work.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JZac Designs Quote / Estimate">
+<meta property="og:description" content="Review and approve your custom JZac Designs quote for vinyl lettering, signs, graphics, decals, and custom design work.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='800' font-size='34' fill='%23ffffff' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HERO / BRAND HEADER
+     ══════════════════════════════════════════════════════════════ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="wordmark">JZAC DESIGNS</div>
+    <p class="tagline">Custom Vinyl &bull; Signs &bull; Graphics &bull; 3D Printed Design</p>
+
+    <div class="hero-rule"></div>
+
+    <h1 class="page-title">Quote / Estimate</h1>
+    <p class="hero-intro">Review your project estimate below. When you&rsquo;re ready, approve the quote or contact us with any questions.</p>
+
+    <div class="hero-meta">
+      <div class="hero-chip">
+        <span class="hero-chip-label">Quote #</span>
+        <span class="hero-chip-value" id="heroQuoteNumber">&mdash;</span>
+      </div>
+      <div class="hero-chip">
+        <span class="hero-chip-label">Prepared for</span>
+        <span class="hero-chip-value" id="heroCustomerName">&mdash;</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ════════════════════════════════════════════════════════════
+       QUOTE SUMMARY CARD
+       ════════════════════════════════════════════════════════════ -->
+  <section class="card card-overlap" aria-labelledby="summary-h">
+    <h2 id="summary-h" class="card-title">Quote Summary</h2>
+    <dl class="summary-grid">
+      <div class="summary-row"><dt>Quote Number</dt><dd id="sQuoteNumber">&mdash;</dd></div>
+      <div class="summary-row"><dt>Customer Name</dt><dd id="sCustomerName">&mdash;</dd></div>
+      <div class="summary-row"><dt>Project Type</dt><dd id="sProjectType">&mdash;</dd></div>
+      <div class="summary-row"><dt>Date Issued</dt><dd id="sDateIssued">&mdash;</dd></div>
+      <div class="summary-row"><dt>Quote Valid Until</dt><dd id="sValidUntil">&mdash;</dd></div>
+      <div class="summary-row"><dt>Estimated Turnaround</dt><dd id="sTurnaround">&mdash;</dd></div>
+      <div class="summary-row"><dt>Location / Shipping</dt><dd id="sLocation">&mdash;</dd></div>
+      <div class="summary-row"><dt>Prepared By</dt><dd id="sPreparedBy">&mdash;</dd></div>
+    </dl>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       PROJECT SCOPE
+       ════════════════════════════════════════════════════════════ -->
+  <section class="card" aria-labelledby="scope-h">
+    <h2 id="scope-h" class="card-title">Project Scope</h2>
+
+    <p class="scope-description" id="scopeDescription">&nbsp;</p>
+
+    <div class="scope-block">
+      <h3 class="scope-h">Included in This Project</h3>
+      <ul class="check-list" id="scopeIncluded"></ul>
+    </div>
+
+    <div class="scope-block">
+      <h3 class="scope-h">Materials</h3>
+      <ul class="check-list" id="scopeMaterials"></ul>
+    </div>
+
+    <div class="scope-block">
+      <h3 class="scope-h">Install / Shipping Notes</h3>
+      <p class="scope-text" id="scopeInstallNotes">&nbsp;</p>
+    </div>
+
+    <div class="scope-block scope-callout">
+      <h3 class="scope-h">What We Need From You</h3>
+      <p class="scope-text" id="scopeCustomerRequirements">&nbsp;</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       LINE ITEM PRICING
+       ════════════════════════════════════════════════════════════ -->
+  <section class="card" aria-labelledby="pricing-h">
+    <h2 id="pricing-h" class="card-title">Pricing</h2>
+
+    <table class="quote-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th class="num">Qty</th>
+          <th class="num">Price</th>
+          <th class="num">Line Total</th>
+        </tr>
+      </thead>
+      <tbody id="lineItemsBody">
+        <!-- rows injected by script.js from QUOTE.lineItems -->
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="totals-row"><span>Subtotal</span><span id="sumSubtotal">&mdash;</span></div>
+      <div class="totals-row"><span id="sumTaxLabel">Tax</span><span id="sumTax">&mdash;</span></div>
+      <div class="totals-row" id="sumFeeRow" hidden><span id="sumFeeLabel">Fee</span><span id="sumFee">&mdash;</span></div>
+      <div class="totals-row totals-total"><span>Total Estimate</span><span id="sumTotal">&mdash;</span></div>
+    </div>
+
+    <div class="deposit-box">
+      <div class="deposit-label" id="sumDepositLabel">Deposit Due at Approval</div>
+      <div class="deposit-amount" id="sumDeposit">&mdash;</div>
+      <div class="balance-note">Balance of <span id="sumBalance">&mdash;</span> due at completion</div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       WHAT HAPPENS NEXT
+       ════════════════════════════════════════════════════════════ -->
+  <section class="card" aria-labelledby="next-h">
+    <h2 id="next-h" class="card-title">What Happens Next</h2>
+    <ol class="steps">
+      <li><span class="step-num">1</span><span>Approve this quote using the button below (or reply by email, call, or text).</span></li>
+      <li><span class="step-num">2</span><span>We confirm final details and collect your deposit to schedule the job.</span></li>
+      <li><span class="step-num">3</span><span>We get to work &mdash; you&rsquo;ll hear from us with updates until it&rsquo;s installed or shipped.</span></li>
+    </ol>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       APPROVAL / CONTACT CTA
+       ════════════════════════════════════════════════════════════ -->
+  <section class="card" aria-labelledby="cta-h">
+    <h2 id="cta-h" class="card-title">Ready to Move Forward?</h2>
+
+    <div class="cta-grid">
+      <a id="btnApprove" class="btn btn-primary" href="mailto:JZacDesigns@proton.me?subject=Quote%20Approval%20-%20JZac%20Designs&body=I%20approve%20this%20quote%20and%20would%20like%20to%20move%20forward.">
+        <span class="btn-title">Approve Quote</span>
+      </a>
+
+      <a id="btnQuestion" class="btn btn-secondary" href="mailto:JZacDesigns@proton.me?subject=Question%20About%20My%20Quote%20-%20JZac%20Designs&body=I%20have%20a%20question%20about%20my%20quote.">
+        <span class="btn-title">Ask a Question</span>
+      </a>
+
+      <a class="btn btn-secondary" href="tel:+15097208239">
+        <span class="btn-title">Call / Text JZac Designs</span>
+        <span class="btn-sub">(509) 720-8239</span>
+      </a>
+
+      <a class="btn btn-secondary" href="mailto:JZacDesigns@proton.me">
+        <span class="btn-title">Email JZac Designs</span>
+        <span class="btn-sub">JZacDesigns@proton.me</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       TERMS & NOTES
+       ════════════════════════════════════════════════════════════ -->
+  <section class="card card-muted" aria-labelledby="terms-h">
+    <h2 id="terms-h" class="card-title">Terms &amp; Notes</h2>
+    <ul class="terms-list">
+      <li>Estimates may change if project scope, materials, or sizing change after approval.</li>
+      <li>Production begins once the quote is approved and any required deposit is received.</li>
+      <li>Please double-check spelling, sizing, colors, and placement before approving &mdash; production starts from what&rsquo;s approved here.</li>
+      <li>Custom work is made specifically for your project and is generally non-refundable once production has started.</li>
+      <li>Outdoor vinyl lifespan varies with material, surface prep, weather exposure, and care &mdash; ask us if you&rsquo;d like specifics for your application.</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap footer-wrap">
+    <div class="footer-row">
+      <a href="tel:+15097208239" class="footer-link">(509) 720-8239</a>
+      <a href="mailto:JZacDesigns@proton.me" class="footer-link">JZacDesigns@proton.me</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 JZac Designs &middot; Spokane, WA</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
