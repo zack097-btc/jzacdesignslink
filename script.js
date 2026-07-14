@@ -29,7 +29,14 @@ const PROJECTS = {
       { src: 'photos/judd-lees-tire-full-alt.jpg', desc: 'Full Set — Alternate Angle' },
       { src: 'photos/judd-lees-tire-display.jpg', desc: 'Display Arrangement' },
       { src: 'photos/judd-lees-tire-detail.jpg', desc: 'Detail — Depth & Craftsmanship' },
-      { src: 'photos/judd-lees-tire-plaque.jpg', desc: 'Desk Plaque Version' }
+      { src: 'photos/judd-lees-tire-plaque.jpg', desc: 'Desk Plaque Version' },
+      { src: 'photos/judd-lees-tire-letter-j.jpg', desc: 'Individual Letter Detail — J' },
+      { src: 'photos/judd-lees-tire-letter-u.jpg', desc: 'Individual Letter Detail — U' },
+      { src: 'photos/judd-lees-tire-letter-l.jpg', desc: 'Individual Letter Detail — L' },
+      { src: 'photos/judd-lees-tire-letter-e.jpg', desc: 'Individual Letter Detail — E' },
+      { src: 'photos/judd-lees-tire-letter-s.jpg', desc: 'Individual Letter Detail — S' },
+      { src: 'photos/judd-lees-tire-letter-t.jpg', desc: 'Individual Letter Detail — T' },
+      { src: 'photos/judd-lees-tire-letter-r.jpg', desc: 'Individual Letter Detail — R' }
     ]
   },
   sorryClosed: {
