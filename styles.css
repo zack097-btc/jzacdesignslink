@@ -249,6 +249,14 @@ ul, ol { list-style: none; }
   letter-spacing: 0.5px;
 }
 
+.card-contact {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+  margin-top: 6px;
+}
+
 .card-intro-line {
   margin-top: 28px;
   font-size: 13.5px;
