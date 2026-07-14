@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JZac Designs — Custom Vinyl, Signs &amp; 3D Design</title>
+<meta name="description" content="JZac Designs — custom vinyl lettering, storefront &amp; vehicle signage, and 3D printed design in Spokane Valley, WA. View our work, save our card, or start a project.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JZac Designs — Custom Vinyl, Signs &amp; 3D Design">
+<meta property="og:description" content="Custom vinyl lettering, storefront &amp; vehicle signage, and 3D printed design in Spokane Valley, WA.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='800' font-size='34' fill='%23ffffff' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     STICKY NAV (fades in after the card intro)
+     ══════════════════════════════════════════════════════════════ -->
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">JZAC DESIGNS</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Kept outside .nav on purpose: .nav is transformed for its show/hide
+     slide, which would otherwise become the containing block for this
+     fixed-position menu and break its inset percentages. -->
+<nav class="nav-menu" id="navMenu">
+  <a href="#explore">Explore</a>
+  <a href="#work">Work</a>
+  <a href="#build">Build a Project</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main id="top">
+
+<!-- ══════════════════════════════════════════════════════════════
+     1. INTERACTIVE DIGITAL CARD
+     ══════════════════════════════════════════════════════════════ -->
+<section class="card-hero">
+  <div class="noise-overlay"></div>
+  <div class="card-scene">
+    <button class="card-flip" id="cardFlip" aria-label="Tap to reveal the JZac Designs card">
+      <div class="card-face card-back">
+        <span class="card-mark">J</span>
+        <span class="card-tap-hint">Tap to open</span>
+      </div>
+      <div class="card-face card-front">
+        <div class="card-wordmark">JZAC DESIGNS</div>
+        <p class="card-tagline">Custom Vinyl &bull; Signs &bull; Graphics &bull; 3D Printed Design</p>
+        <div class="card-divider"></div>
+        <p class="card-loc">Spokane Valley, WA &nbsp;&middot;&nbsp; Est. 2024</p>
+      </div>
+    </button>
+  </div>
+
+  <p class="card-intro-line">This is our card. Save it, share it, or see what we build.</p>
+
+  <div class="card-actions">
+    <button class="pill-btn pill-primary" id="btnSaveContact">
+      <span>Save Contact</span>
+    </button>
+    <button class="pill-btn" id="btnShare">
+      <span>Share</span>
+    </button>
+  </div>
+
+  <div class="card-quicklinks">
+    <a href="#work" class="quicklink">See Our Work</a>
+    <a href="#build" class="quicklink">Start a Project</a>
+  </div>
+
+  <a href="#explore" class="scroll-cue" aria-label="Scroll to explore">
+    <span></span>
+  </a>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     2. EXPLORE JZAC
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section" id="explore">
+  <div class="wrap">
+    <p class="eyebrow">Explore JZAC</p>
+    <h2 class="section-title">Everything we build, in four categories.</h2>
+
+    <div class="explore-grid">
+      <a href="#work" data-filter="commercial" class="explore-card">
+        <span class="explore-num">01</span>
+        <h3>Vinyl &amp; Signage</h3>
+        <p>Storefront lettering, vehicle &amp; fleet graphics, USDOT compliance, decals, and custom signs — cut from premium vinyl and installed to last.</p>
+      </a>
+      <a href="#build" class="explore-card">
+        <span class="explore-num">02</span>
+        <h3>Design</h3>
+        <p>Free digital proofs, logo vectorization, and layout work on every job before a single cut is made.</p>
+      </a>
+      <a href="#work" data-filter="fabrication" class="explore-card">
+        <span class="explore-num">03</span>
+        <h3>3D Design &amp; Fabrication</h3>
+        <p>3D printed dimensional letters, plaques, and display pieces — designed and printed in-house.</p>
+      </a>
+      <a href="#build" class="explore-card">
+        <span class="explore-num">04</span>
+        <h3>Custom Products</h3>
+        <p>One-off builds for boats, events, and personal projects. If you can describe it, we can probably make it.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     3. SELECTED WORK / PORTFOLIO
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="work">
+  <div class="wrap">
+    <p class="eyebrow">Selected Work</p>
+    <h2 class="section-title">Real projects, real clients.</h2>
+
+    <div class="filter-row" id="filterRow">
+      <button class="filter-pill is-active" data-filter="all">All Work</button>
+      <button class="filter-pill" data-filter="commercial">Commercial Signs</button>
+      <button class="filter-pill" data-filter="fabrication">Dimensional Letters</button>
+      <button class="filter-pill" data-filter="custom">Custom Pieces</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+      <!-- Kritters Den -->
+      <button class="portfolio-card" data-filter="commercial" data-project="krittersDen">
+        <img src="photos/kritters-den-lit.jpg" alt="The Kritters Den custom LED logo sign, lit in green and blue">
+        <span class="portfolio-caption">
+          <span class="pc-client">The Kritters Den</span>
+          <span class="pc-type">Custom LED Logo Sign</span>
+        </span>
+      </button>
+
+      <!-- Judd Lee's Tire -->
+      <button class="portfolio-card" data-filter="fabrication" data-project="juddLees">
+        <img src="photos/judd-lees-tire-full-layout.jpg" alt="Judd Lee's Tire full 3D dimensional letter set">
+        <span class="portfolio-caption">
+          <span class="pc-client">Judd Lee's Tire</span>
+          <span class="pc-type">3D Dimensional Letters</span>
+        </span>
+      </button>
+
+      <!-- Sorry We're Closed -->
+      <button class="portfolio-card" data-filter="commercial" data-project="sorryClosed">
+        <img src="photos/sorry-were-closed-installed.jpg" alt="Sorry We're Closed LED backlit sign installed">
+        <span class="portfolio-caption">
+          <span class="pc-client">Sorry We're Closed</span>
+          <span class="pc-type">LED Backlit Sign &mdash; Installed</span>
+        </span>
+      </button>
+
+      <!-- Milligan Motorsports -->
+      <button class="portfolio-card" data-filter="commercial" data-project="milligan">
+        <img src="photos/milligan-motorsports-plaque.jpg" alt="Milligan Motorsports custom 3D business plaque">
+        <span class="portfolio-caption">
+          <span class="pc-client">Milligan Motorsports</span>
+          <span class="pc-type">Custom 3D Business Plaque</span>
+        </span>
+      </button>
+
+      <!-- BMW M -->
+      <button class="portfolio-card" data-filter="custom" data-project="bmwM">
+        <img src="photos/bmw-m-plaque.jpg" alt="BMW M custom glow-in-dark plaque for @M3Zack3">
+        <span class="portfolio-caption">
+          <span class="pc-client">@M3Zack3 / BMW M</span>
+          <span class="pc-type">Custom Glow-in-Dark Plaque</span>
+        </span>
+      </button>
+    </div>
+
+    <p class="portfolio-note">More projects added regularly.</p>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">&#8249;</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">&#8250;</button>
+  <div class="lightbox-body">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption">
+      <div class="lc-client" id="lightboxClient"></div>
+      <div class="lc-desc" id="lightboxDesc"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     4. BUILD YOUR PROJECT (quote funnel)
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section" id="build">
+  <div class="wrap wrap-narrow">
+    <p class="eyebrow">Build Your Project</p>
+    <h2 class="section-title">Tell us what you need — takes about a minute.</h2>
+    <p class="section-sub">This isn't a final quote, just enough detail for us to get back to you with real numbers.</p>
+
+    <div class="funnel-card">
+      <div class="funnel-progress">
+        <span class="fp-step is-active" data-step="1">1</span>
+        <span class="fp-line"></span>
+        <span class="fp-step" data-step="2">2</span>
+        <span class="fp-line"></span>
+        <span class="fp-step" data-step="3">3</span>
+      </div>
+
+      <form id="funnelForm">
+        <!-- Step 1 -->
+        <div class="funnel-step is-active" data-step="1">
+          <h3 class="funnel-h">What are you looking for?</h3>
+          <div class="option-grid" id="projectTypeGrid">
+            <button type="button" class="option-card" data-value="Vinyl Lettering &amp; Decals">Vinyl Lettering &amp; Decals</button>
+            <button type="button" class="option-card" data-value="Storefront / Business Signs">Storefront / Business Signs</button>
+            <button type="button" class="option-card" data-value="Vehicle &amp; Fleet Lettering">Vehicle &amp; Fleet Lettering</button>
+            <button type="button" class="option-card" data-value="3D Printed / Custom Fabrication">3D Printed / Custom Fabrication</button>
+            <button type="button" class="option-card" data-value="Boat Lettering">Boat Lettering</button>
+            <button type="button" class="option-card" data-value="Something Else">Something Else</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="funnel-step" data-step="2">
+          <h3 class="funnel-h">Tell us about it</h3>
+          <label class="field-label" for="fProjectDesc">Project description</label>
+          <textarea class="field-input" id="fProjectDesc" rows="4" placeholder="What's the project? Size, quantity, colors, where it's going — whatever you know."></textarea>
+          <label class="field-label" for="fTimeline">Timeline</label>
+          <input class="field-input" id="fTimeline" type="text" placeholder="e.g. no rush, or need it by a specific date">
+        </div>
+
+        <!-- Step 3 -->
+        <div class="funnel-step" data-step="3">
+          <h3 class="funnel-h">How do we reach you?</h3>
+          <label class="field-label" for="fName">Name</label>
+          <input class="field-input" id="fName" type="text" required autocomplete="name">
+          <label class="field-label" for="fPhone">Phone</label>
+          <input class="field-input" id="fPhone" type="tel" autocomplete="tel">
+          <label class="field-label" for="fEmail">Email</label>
+          <input class="field-input" id="fEmail" type="email" required autocomplete="email">
+        </div>
+
+        <div class="funnel-nav">
+          <button type="button" class="btn-text" id="funnelBack" hidden>Back</button>
+          <button type="button" class="btn-solid" id="funnelNext">Continue</button>
+          <a class="btn-solid" id="funnelSend" href="mailto:JZacDesigns@proton.me" hidden>Send Request</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     5. ABOUT JZAC
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="about">
+  <div class="wrap wrap-narrow">
+    <p class="eyebrow">About JZAC</p>
+    <h2 class="section-title">Built in Spokane Valley, made to last outdoors.</h2>
+    <p class="about-text">
+      JZac Designs started in Spokane Valley, WA in 2024 on a simple idea: small businesses deserve sign work
+      that looks like it cost more than it did. Today that means everything from a single storefront decal to
+      full fleet lettering — plus a growing line of 3D printed custom pieces designed and printed in-house.
+    </p>
+    <p class="about-text">
+      Every job starts with a free digital proof before anything gets cut. Vinyl work is cut from premium
+      cast film rated for years of outdoor use, not the bargain stuff that fades and cracks. And in most cases,
+      the person who designed your piece is the same person who installs it.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     6. BUSINESS INFORMATION
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section" id="business">
+  <div class="wrap">
+    <p class="eyebrow">Business Information</p>
+    <h2 class="section-title">The details.</h2>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <span class="info-label">Service Area</span>
+        <span class="info-value">Spokane Valley, WA &mdash; local install. Vinyl &amp; decal orders ship nationwide.</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Materials</span>
+        <span class="info-value">3M Scotchcal&trade; 7725 premium cast vinyl, rated 7&ndash;10 years outdoors.</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Typical Turnaround</span>
+        <span class="info-value">1&ndash;2 business days for simple jobs, 3&ndash;5 for complex work, after art approval.</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Scheduling</span>
+        <span class="info-value">By appointment &mdash; call, text, or email to set up a time.</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Payment</span>
+        <span class="info-value">Deposit to schedule custom work, balance due at completion. Details confirmed on your quote.</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Find Us</span>
+        <span class="info-value">Instagram <a href="https://instagram.com/jzacdesigns" target="_blank" rel="noopener">@jzacdesigns</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     7. CONTACT / QUOTE
+     ══════════════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="contact">
+  <div class="wrap wrap-narrow" style="text-align:center">
+    <p class="eyebrow">Contact / Quote</p>
+    <h2 class="section-title">Ready when you are.</h2>
+    <p class="section-sub">Already have a quote number from us? Use the link we sent you. Otherwise, let's start here.</p>
+
+    <div class="contact-actions">
+      <a href="#build" class="btn-solid btn-large">Start a Project</a>
+      <a href="tel:+15097208239" class="btn-outline btn-large">
+        Call / Text &mdash; (509) 720-8239
+      </a>
+      <a href="mailto:JZacDesigns@proton.me" class="btn-outline btn-large">
+        Email &mdash; JZacDesigns@proton.me
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap footer-wrap">
+    <div class="footer-top">
+      <div class="footer-brand">JZAC DESIGNS</div>
+      <nav class="footer-links">
+        <a href="#explore">Explore</a>
+        <a href="#work">Work</a>
+        <a href="#build">Build a Project</a>
+        <a href="#about">About</a>
+        <a href="#business">Business Info</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-row">
+      <a href="tel:+15097208239" class="footer-link">(509) 720-8239</a>
+      <a href="mailto:JZacDesigns@proton.me" class="footer-link">JZacDesigns@proton.me</a>
+      <a href="https://instagram.com/jzacdesigns" class="footer-link" target="_blank" rel="noopener">@jzacdesigns</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 JZac Designs &middot; Spokane Valley, WA</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
