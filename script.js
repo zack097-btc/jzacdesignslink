@@ -6,7 +6,7 @@ const CONTACT = {
   name: 'JZac Designs',
   phone: '+15097208239',
   phoneDisplay: '(509) 720-8239',
-  email: 'JZacDesigns@proton.me',
+  email: 'jzacdesigns@jzacdesigns.com',
   city: 'Spokane Valley',
   state: 'WA'
 };

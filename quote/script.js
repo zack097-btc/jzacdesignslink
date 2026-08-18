@@ -178,13 +178,13 @@ const QUOTE = {
   if (approveBtn) {
     const subject = encodeURIComponent('Quote Approval - JZac Designs');
     const body = encodeURIComponent(`I approve this quote and would like to move forward. Quote Number: ${QUOTE.quoteNumber}.`);
-    approveBtn.href = `mailto:JZacDesigns@proton.me?subject=${subject}&body=${body}`;
+    approveBtn.href = `mailto:jzacdesigns@jzacdesigns.com?subject=${subject}&body=${body}`;
   }
 
   const questionBtn = document.getElementById('btnQuestion');
   if (questionBtn) {
     const subject = encodeURIComponent('Question About My Quote - JZac Designs');
     const body = encodeURIComponent(`I have a question about my quote. Quote Number: ${QUOTE.quoteNumber}.\n\nMy question: `);
-    questionBtn.href = `mailto:JZacDesigns@proton.me?subject=${subject}&body=${body}`;
+    questionBtn.href = `mailto:jzacdesigns@jzacdesigns.com?subject=${subject}&body=${body}`;
   }
 })();
